@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panini2.0 · Voucher Log</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Panini2.0</p>
+        <h1>Issued Voucher Log</h1>
+        <p class="subtitle">Track every cafe voucher that has been issued.</p>
+      </div>
+      <nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="log.html">Voucher Log</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <div class="log-header">
+          <h2>Recent vouchers</h2>
+          <span class="pill" id="voucher-count">0 vouchers</span>
+        </div>
+        <div class="table" id="voucher-table">
+          <div class="table-row table-head">
+            <span>Student</span>
+            <span>Commendations</span>
+            <span>Issued on</span>
+            <span>Amount</span>
+          </div>
+        </div>
+        <p class="helper" id="voucher-empty">No vouchers issued yet.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Use the home page to issue new vouchers once students reach five commendations.</p>
+    </footer>
+
+    <script src="log.js"></script>
+  </body>
+</html>

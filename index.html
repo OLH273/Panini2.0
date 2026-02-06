@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panini2.0 · Voucher Issuer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Panini2.0</p>
+        <h1>Commendation Voucher Issuer</h1>
+        <p class="subtitle">Reward students once they reach five commendations.</p>
+      </div>
+      <nav>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="log.html">Voucher Log</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <h2>Student details</h2>
+        <form id="voucher-form" class="form-grid">
+          <label>
+            Student name
+            <input type="text" name="studentName" placeholder="e.g. Jamie Patel" required />
+          </label>
+          <label>
+            Commendations
+            <input
+              type="number"
+              name="commendations"
+              min="0"
+              step="1"
+              placeholder="0"
+              required
+            />
+          </label>
+          <button type="submit" class="primary">Issue voucher</button>
+        </form>
+        <p class="helper" id="eligibility-message">
+          Enter 5 or more commendations to unlock voucher issuing.
+        </p>
+      </section>
+
+      <section class="card printable" aria-live="polite">
+        <div class="voucher-preview" id="voucher-preview">
+          <div class="voucher-header">
+            <div>
+              <p class="voucher-title">Cafe Voucher</p>
+              <p class="voucher-amount">£2.90</p>
+            </div>
+            <span class="voucher-badge">Issued</span>
+          </div>
+          <div class="voucher-body">
+            <div>
+              <p class="label">Student</p>
+              <p class="value" id="voucher-student">—</p>
+            </div>
+            <div>
+              <p class="label">Commendations</p>
+              <p class="value" id="voucher-commendations">—</p>
+            </div>
+            <div>
+              <p class="label">Issued on</p>
+              <p class="value" id="voucher-date">—</p>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="secondary" id="print-voucher" disabled>
+            Print / Save PDF
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Vouchers are stored locally in this browser. Printing uses your system dialog
+        for PDF or paper copies.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
